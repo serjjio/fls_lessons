@@ -1,0 +1,228 @@
+/* ========================= ШРИФТИ =============================== */
+
+/* Google Fonts */
+/*
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+*/
+/* Google Fonts (Plugin) */
+/* 
+@import url("https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+Khojki:regular&display=swap");
+*/
+
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+	font-family: "Quicksand", sans-serif;
+	font-weight: 500;
+	color: #0d1216;
+}
+
+.title {
+}
+
+/* -------- CSS-властивості шрифтів ------------ */
+
+/* 
+Встановлює родину шрифту
+font-family: "Ім'я шрифту", "Ім'я шрифту", тип шрифту;
+успадковується
+
+Типи шрифтів:
+serif — шрифт з зарубками (засічками)
+sans-serif — рублений (без зарубок)
+cursive - курсивні шрифти
+fantasy — декоративні
+monospace — моноширинні
+*/
+.title {
+	/* font-family: "Causten", sans-serif; */
+	/* font-family: "Noto Sans Khojki", sans-serif; */
+}
+/*
+Встановлює розмір шрифту
+font-size: цифрове значення одиниця виміру;
+(за замовчунням 16px, якщо в браузері не вказано іншого)
+успадковується
+*/
+
+.title {
+	font-size: 64px;
+}
+
+/*
+Встановлює стиль шрифту
+font-style: назва стилю;
+успадковується
+
+normal (за замовчуванням) - звичайний (не змінений, стандартний) стиль 
+italic - курсив
+oblique - нахилення літер
+*/
+
+.title {
+	/* font-style: italic; */
+}
+
+/*
+Встановлює насиченість (товщину, вагу) шрифту
+font-weight: цифрове значення або 
+значення словом (словесне);
+успадковується
+
+100 - thin 
+300 - light 
+400 - Regular (normal) (за замовчуванням)
+500 - medium 
+600 - semibold 
+700 - bold 
+900 - black
+*/
+.title {
+	font-weight: 700;
+}
+
+/* -------- CSS-властивості тексту ------------ */
+
+/*
+Встановлює колір тексту
+color: слово або код кольору;
+успадковується
+*/
+
+.title {
+	/* color: green; */
+	/* color: rgba(13, 18, 22, 0.5); */
+}
+.sub-title {
+	/* color: yellowgreen; */
+}
+
+/*
+Встановлює вирівнювання тексту 
+(та рядкових, блочно-рядкових елементів)
+text-align: значення;
+успадковується (текстом)
+
+center - вирівнює по центру
+left - (за замовченням) вирівнює по лівому краю
+right - вирівнює по правому краю
+justify - вирівнює текст по ширині об'єкту 
+в якому він знаходиться 
+автоматично змінюючи пробіли між словами
+*/
+.title {
+	/* text-align: center; */
+}
+.text {
+	/* text-align: right; */
+}
+
+/*
+Додає тексту певне оформлення 
+text-decoration: значення;
+line-through - закреслює текст
+overline - лінія над текстом
+underline - лінія під текстом
+none - (за замовченням) відміняє змінений раніше параметр
+
+text-decoration-color - змінює колір лінії
+text-decoration-style -  змінює стиль лінії (wavy, dashed, dotted, double)
+*/
+
+.title {
+	/* 
+	color: green;
+	text-decoration: line-through;
+	text-decoration-color: red;
+	text-decoration-style: double;
+	 */
+	/* (!не працбє в сафарі) text-decoration: line-through double red; */
+}
+.text {
+	/*
+	color: green;
+	text-decoration: underline;
+	text-decoration-color: red;
+	text-decoration-style: double;
+	*/
+	/* (!не працбє в сафарі) text-decoration: underline dotted red; */
+}
+
+/*
+Додає тексту тінь
+text-shadow: горизонтальне_зміщення вертикальне_зміщення розмір колір;
+успадковується (текстом)
+Може бути мульти-тінь 
+(значення через кому - text-shadow: 2px 2px 5px #000, 5px -2px 10px red;)
+*/
+
+.title {
+	/*
+	text-shadow:
+		5px 5px 15px rgba(0, 0, 0, 0.4),
+		-2px -2px 5px red;
+	*/
+}
+
+/*
+Встановлює тип (регістр) літер (прописні або заглавні)
+text-transform: значення;
+успадковується (текстом)
+capitalize - кожне слово починається з заглавної літери
+lowercase - усі літери прописні (нижній регістр)
+uppercase - усі літери заглавні (верхній регістр)
+none - (за замовчунням) не змінює (або відмініє) значення
+*/
+
+.title {
+	/* text-transform: uppercase; */
+}
+
+/*
+Визначає міжрядковий інтервал (відстань) (висота рядка)
+line-height: значення;
+Перевести пікселі в частини:
+значення line-height поділити на значення font-size
+успадковується (текстом, лише якщо задані частини)
+*/
+.text {
+	line-height: 1.5625; /* 25/16 */
+}
+
+/*
+Встановлює інтервал між літерами (символами)
+letter-spacing: значення;
+успадковується (текстом)
+*/
+
+.title {
+	/* letter-spacing: 10px; */
+}
+
+/*
+Встановлює інтервал між словами
+word-spacing: значення;
+успадковується (текстом)
+*/
+.title {
+	/* word-spacing: 50px; */
+}
+
+/*
+Керує поведінкою пробілів між словами
+white-space: значення;
+nowrap - забороняє переніс рядка
+normal - (за замовчунням) 
+не змінює (або відмініє) значення
+успадковується (текстом)
+*/
+.text {
+	/* white-space: nowrap; */
+}
