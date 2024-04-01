@@ -1,0 +1,367 @@
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+@import url("https://fonts.googleapis.com/css?family=Exo:700&display=swap");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+	font-family: "Quicksand", sans-serif;
+	background-color: #333;
+	color: #fff;
+}
+.page {
+	padding: 30px;
+}
+.example {
+	padding: 20px;
+}
+
+/* ============================================= */
+/* =============== Псевдокласи ================= */
+/* ============================================= */
+
+/* Анатомія псевдокласів */
+/*
+селектор:псевдоклас{
+}
+*/
+/*
+Вкладеність
+селектор#1:псевдоклас селектор#2{
+}
+*/
+
+/* Псевдокласи стану */
+/*
+	:hover
+	Звернення до елемента у стані "при наведенні миші"
+	Застосовується до будь-якого елемента
+*/
+.link {
+	background-color: #8b3dff;
+	padding: 12px;
+	font-weight: 700;
+	line-height: 1.56;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+.link span {
+	display: inline-block;
+	background: url("../img/favourite.svg") 0 0 no-repeat;
+	padding-left: 34px;
+}
+/* + */
+.link:hover {
+	background-color: #a875ff;
+}
+
+.link:hover span {
+	background-position: 5px 0;
+}
+
+/* Застосовується до будь-якого елемента */
+.text {
+	background-color: #7a956b;
+	padding: 15px;
+	/* visibility: hidden; */
+}
+.text:hover {
+	/* background-color: #77608d; */
+}
+.page:hover .text {
+	/* visibility: visible; */
+}
+
+/*
+	:active Звернення до елемента у стані 
+	"при натиснутій клавіші миші"
+*/
+.link:active {
+	/* background-color: #7921ed; */
+}
+
+/*
+:visited Звернення до елемента 
+у стані "відвіданого посилання"
+обмежена кількість властивостей
+*/
+.link:visited {
+	/* background-color: #8776a1; */
+}
+
+/*
+	:focus, :focus-visible Звернення до 
+	елементу у стані "фокусу"
+*/
+.link:focus {
+	/* outline: 2px dashed red; */
+}
+/* Тільки коли на об'єкт перейшли (TAB) */
+.link:focus-visible {
+	/* outline: 2px dashed red; */
+}
+
+/*
+:target
+Звернення до елемента у стані
+"ефекту від посилання з іншого об'єкту"
+*/
+
+/*
+.show {
+	color: yellow;
+}
+.show:hover {
+	text-decoration: underline;
+}
+*/
+/*
+.text {
+	display: none;
+}
+.text:target {
+	display: block;
+}
+*/
+/* Псевдокласи положення у коді */
+
+/*
+	:first-child
+	Звернення до першого дочірнього елементу в коді
+*/
+/*
+.text p:first-child {
+	background-color: #77608d;
+}
+.text *:first-child {
+	background-color: #77608d;
+}
+*/
+
+/* 
+	:first-of-type
+	Звернення до першого вказаного 
+	об'єкту в коді
+*/
+/*
+.text p:first-of-type {
+	background-color: #7a956b;
+}
+*/
+
+/*
+	:last-child
+	Звернення до останього 
+	елементу в коді
+*/
+/*
+.text p:last-child {
+	text-transform: uppercase;
+}
+*/
+/*
+	:last-of-type
+	Звернення до останього 
+	вказаного об'єкту в коді
+*/
+/*
+.text p:last-of-type {
+	text-transform: uppercase;
+}
+*/
+
+/*
+:nth-child(значення/алгоритм)
+Звернення до конкретного елементу в коді
+
+odd - через один не парні
+even - через один парні
+*/
+/*
+.text p:nth-child(8) {
+	background-color: #7a956b;
+}
+*/
+/*
+.text p:nth-child(even) {
+	background-color: #7a956b;
+}
+*/
+/* Вкладенність */
+/*
+.text:nth-child(even) p {
+	background-color: #7a956b;
+}
+*/
+/*
+.text p:nth-child(1),
+.text p:nth-child(4),
+.text p:nth-child(8) {
+	background-color: #7a956b;
+}
+*/
+/* Алгоритм "кожен-через" */
+/* коженn + починаючи з */
+/*
+Кожен третій
+.text p:nth-child(3n) {
+	background-color: #7a956b;
+}
+Кожен третій починаючи з першого
+.text p:nth-child(3n + 1) {
+	background-color: #7a956b;
+}
+*/
+/*
+Кожен третій починаючи з другого
+.text p:nth-child(3n + 2) {
+	background-color: #794f45;
+}
+*/
+/*
+Кожен четвертий починаючи з другого
+.text p:nth-child(4n + 2) {
+	background-color: #77608d;
+}
+*/
+
+/*
+	:not(селектор або псевдоклас) 
+	Псевдоклас виключення
+*/
+
+/*
+.text p {
+	margin-bottom: 15px;
+}
+.text p:last-child {
+	margin-bottom: 0px;
+}
+*/
+
+/* АБО */
+.text p:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+/* 
+	:has(селектор або псевдоклас) 
+	Псевдоклас присутності в коді
+*/
+/*
+.text:has(p) {
+	background-color: #794f45;
+}
+
+.text:has(span) {
+	background-color: #fff;
+}*/
+
+/* Гарна практика */
+
+/* Вказуємо відсуп за замовченням */
+.article > * {
+	margin-bottom: 15px;
+}
+.title {
+	font-weight: 700;
+	font-size: 24px;
+	/* Задаємо свій відступ за потреби */
+	margin-bottom: 25px;
+}
+.content {
+	line-height: 1.2;
+}
+.button {
+	background-color: yellow;
+	padding: 12px;
+	border-radius: 5px;
+	color: #000;
+}
+.button:hover {
+	background-color: rgb(35, 238, 16);
+}
+.article > *:last-child {
+	margin-bottom: 0px;
+}
+
+/* 
+	Псевдокласи мають більший пріоритет
+	(уточнення)
+*/
+
+/* ============================================= */
+/* =============== Псевдоелементи ============== */
+/* ============================================= */
+
+/* Анатомія псевдоелементів */
+/*
+селектор::псевдоелемент{
+}
+Псевдоелементи не можна додати до 
+одинарних тегів(наприклад img,br), 
+тому що ці теги не можуть містити в собі контенту.
+*/
+
+/*
+::before{}
+::after{}
+
+!!!!! Псевдоелементи - рядкові  (але в reset доданий display: inline-block;) !!!!!
+Властивість content: ""; - Обов'язкова!
+*/
+/*
+.block::before {
+	content: "(";
+}
+.block::after {
+	content: ")";
+}
+*/
+/*
+.list {
+	font-size: 10px;
+}
+.list__item:not(:last-child) {
+	margin-bottom: 5px;
+}
+.list__item::before {
+	content: "";
+	vertical-align: middle;
+	background: url("../img/icon.png") 0 0 / 100% no-repeat;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.list__item:hover::before {
+	opacity: 0.5;
+}
+*/
+/* Взаємодія псевдокласа та псевдоелемента */
+/* Звернення до ::before коли .list__item у стані :hover */
+/* ніяких пробілів */
+/*
+.list__item:hover::before {
+}
+*/
+
+.sub-title {
+	display: inline-block;
+	font-family: "Exo", sans-serif;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 1.16; /* 70/60 */
+	text-transform: uppercase;
+}
+.sub-title::after {
+	margin-top: 20px;
+	max-width: 80%;
+	height: 1px;
+	display: block;
+	content: "";
+	background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 51%, rgba(36, 0, 255, 1) 100%);
+}
+
+/* background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 51%, rgba(36,0,255,1) 100%); */
